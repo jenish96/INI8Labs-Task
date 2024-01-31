@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-app.get('/user/', (req, res) => {
+app.get('/user/all', (req, res) => {
     try {
         con.query('select * from Registration', (err, result) => {
             if (err) {
